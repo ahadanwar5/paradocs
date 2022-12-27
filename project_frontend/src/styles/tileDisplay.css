@@ -1,0 +1,13 @@
+.sample-div{
+    display: flex;
+    flex-direction: row;    
+    justify-content: center;
+    column-gap: 1%;
+    padding: 1%;
+}
+
+.main-div{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}

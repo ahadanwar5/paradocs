@@ -1,0 +1,128 @@
+.a-row {
+    display: flex;
+    flex-wrap: wrap;
+    background-color:white;
+    align-items: center;
+}
+
+.a-col-sm-4
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+}
+
+.a-col-sm-4:nth-child(2),.a-col-sm-4:nth-child(1){
+    border-right: 1px dotted #58595b;
+    
+}
+
+@media screen and (max-width: 780px) {
+    .a-row {
+        flex-direction: column;
+    }
+
+    .a-col {
+        margin-bottom: 20px;
+    }
+}
+
+
+.a-col-sm-4:nth-child(2) h2 {
+    color:#0f3460;
+    font-size: 18px;
+    margin: 29px 0 0px;
+    font-family: LatoBold;
+    padding: 0;
+}
+
+.a-col-sm-4:nth-child(2) h1 {
+color: #0f3460;
+font-size: 50px;
+margin: 0 0 10px;
+font-family: LatoBold;
+text-align: center;
+align-self: center;
+align-items: center;
+}
+
+.a-col-sm-4:nth-child(2) p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    text-align: left;
+    margin-bottom:5px;    
+    margin-left:5px;
+    margin-right:5px;
+}
+
+.a-col-sm-4:nth-child(2) h5 {
+    font-size: 16px;
+    font-family: LatoBold;
+    color: #151b39;
+    display: block;
+    padding: 0 0 5px;
+}
+
+
+.a-col-sm-4:nth-child(1) h3 {
+    font-size: 30px;
+    color: #151b39;
+    text-transform: uppercase;
+    font-family: LatoBold;
+    display: inline;
+    text-align: right;
+    margin-right: 50px;
+    padding: 4px 0;
+    letter-spacing:0.3em;
+}
+
+.a-col-sm-4:nth-child(1) h4 {
+    font-size: 20px;
+    color: #151b39;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans';
+    text-align: right;
+    margin-right: 50px;
+    letter-spacing:0em;
+    padding: 4px 0;
+    display: block;
+    line-height: 0.1em;
+}
+
+
+
+.fa{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 4em;    
+}
+.fa-right {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 4em;    
+    align-self: flex-end;  
+}   
+.text-blue
+{
+    color: #0f3460;
+    }   
+
+#p-review{
+margin-left: 5px;
+font-size: 30px;
+color: #58595b;
+padding: 10px 10px;
+
+} 
+#review-author{
+    margin-left: 5px;
+    font-size: 30px;
+    color: #58595b;
+    padding: 10px 10px;
+    } 

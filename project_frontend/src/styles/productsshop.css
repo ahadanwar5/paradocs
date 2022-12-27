@@ -1,0 +1,103 @@
+
+
+.shop-row:first-child {
+    display: flex;
+}
+
+.shop-col:first-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-col:first-child h2 {
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-family: "Roboto-Bold";
+color: rgb(125,146,145);
+}
+
+.shop-col:last-child {
+    flex: 5;
+}
+
+.shop-products {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.shop-pagination {
+    text-align: center;
+}
+
+.shop-btn {
+    width: 90%;
+    background-color: transparent;
+    margin-bottom: 10px;
+    font-family: "Roboto-Bold";
+    position: relative;
+   background: #606c88;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+align-self: flex-start;
+    color: whitesmoke;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.shop-btn svg {
+    transition: all 0.5s;
+}
+
+.shop-btn:hover svg {
+    color: #ff0000;
+    margin-left: 5px;
+}
+
+.shop-pagination {
+    display: flex;
+    
+}
+
+.paginationBttns {
+    width: 80%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+  
+.paginationBttns a {
+    padding: 5px 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    color: #000000;
+    cursor: pointer;
+}
+  
+.paginationBttns a:hover {
+    color: #ffffff;
+    background-color: #ff0000;
+}
+  
+.paginationActive a {
+    color: #ffffff;
+    background-color: #ff0000;
+}
+  
+.paginationDisabled a {
+    color: rgba(128, 128, 128, 0.11);
+    background-color: rgba(128, 128, 128, 0.11);;
+}
+
+.paginationDisabled:hover a {
+    background-color: rgba(128, 128, 128, 0.11);
+    color: rgba(128, 128, 128, 0.11);
+}
+
+@media screen and (max-width: 530px) {
+    .shop-row:first-child {
+        flex-direction: column;
+    }
+}

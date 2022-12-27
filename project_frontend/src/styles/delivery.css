@@ -1,0 +1,57 @@
+.d-container {
+    margin-top: 15px;
+    padding: 20px 15px;
+    background-color: white;
+}
+
+.d-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.d-row  {
+    display: flexbox;
+    flex: 1;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 5px;   
+    flex-wrap: wrap;
+
+}
+
+
+.d-heading h1 {
+    color:#0f3460;
+    font-size:30px;
+    margin: 29px 0 30px;
+    font-family: LatoBold;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+}
+
+
+
+.d-row h2 {
+    color: #0d4b77;
+    font-size: 30px;
+    margin-left: 20px;
+    font-family: Lato;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 20px;    
+
+}
+
+.d-row  p {
+display: block;
+text-align: left;
+margin-bottom: 5px;    
+margin-left:45px;
+margin-right:5px;
+}
