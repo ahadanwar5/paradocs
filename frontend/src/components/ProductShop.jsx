@@ -1,13 +1,19 @@
 import axios from "axios";
 
-import React, { useContext } from "react";
-import { toast } from "react-toastify";
+import React, { useContext, useState } from "react";
 import { Store } from "../Store";
 import { Link } from 'react-router-dom'
 import "../styles/ProductShop.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faEye } from "@fortawesome/free-solid-svg-icons";
+import Quick from "../components/Quick";
+
+
+
+
 const ProductShop = ({ item }) => {
+  const [open, setOpen] = useState(false);
+
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, wish } = state;
   const addToCartHandler = async () => {
@@ -16,18 +22,14 @@ const ProductShop = ({ item }) => {
 
     const { data } = await axios.get(`/api/products/${item.slug}`);
     if (data.countInStock < quantity) {
-      toast.warning("Product is Out of Stock",{position:toast.POSITION.TOP_CENTER, autoClose:1000});
-
+      window.alert("Sorry. Product is out of stock.");
       return;
     }
-
 
     ctxDispatch({
       type: "CART_ADD_ITEM",
       payload: { ...item, quantity },
     });
-    toast.info("Product added to Cart",{position:toast.POSITION.TOP_CENTER, autoClose:1000});
-
   };
 
   const addToWishHandler = () => {
@@ -35,8 +37,9 @@ const ProductShop = ({ item }) => {
     const quantity = existItem ? existItem.quantity : 1;
 
     if (existItem) {
-      toast.warning("Product already in wishlist",{position:toast.POSITION.TOP_CENTER, autoClose:1000});
-
+      window.alert(
+        "Sorry. You have already added the product to your wish list."
+      );
       return;
     }
 
@@ -44,15 +47,13 @@ const ProductShop = ({ item }) => {
       type: "WISH_ADD_ITEM",
       payload: { ...item, quantity },
     });
-    toast.info("Product added to Wish List",{position:toast.POSITION.TOP_CENTER, autoClose:1000});
-
   };
 
   return (
  
 
     <div class="col hp">
-      <div class="card h-90 shadow-sm card-styling-boundary">
+      <div class="card h-100 shadow-sm card-styling-boundary">
         <Link  to={`/product/${item.slug}`}>
         <img src={item.image} class="card-img-top" alt="product.title" />
         </Link>
@@ -77,7 +78,7 @@ const ProductShop = ({ item }) => {
           </div>
           
           <br />
-          {/* <h5 class="card-title">{item.desc}</h5> */}
+          <h5 class="card-title">{item.desc}</h5>
 
           <div class="d-grid gap-2 my-4">
             <button onClick={addToCartHandler} class="btn btn-primary bold-btn">
@@ -85,12 +86,13 @@ const ProductShop = ({ item }) => {
             </button>
           </div>
           <div class="clearfix mb-1">
-            <span class="float-start">
-              <a href="#">
-                <i class="fas fa-question-circle"></i>
-              </a>
-            </span>
-
+              <span class="float-start">
+              <FontAwesomeIcon
+                  onClick={() => setOpen(true)}
+                  icon={faEye}
+                  class="wishlist-icon-styling mr-1"
+                />
+              </span>
             <span class="float-end">
               <FontAwesomeIcon
                 onClick={addToWishHandler}
@@ -101,6 +103,7 @@ const ProductShop = ({ item }) => {
           </div>
         </div>
       </div>
+      {open && <Quick item={item} />}
     </div>
   );
 };
