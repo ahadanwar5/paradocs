@@ -25,6 +25,8 @@ import Account from "./pages/Account";
 import Contact from "./pages/Contact";
 import Dashboard from "./dasboard/Dashboard";
 import Admin from "./dasboard/Admin";
+import CustomersPage from "./dasboard/CustomersPage";
+import OrdersPage from "./dasboard/OrdersPage";
 
 function App() {
   return (
@@ -54,6 +56,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/dashboard/customers" element={<CustomersPage />} />
+          <Route path="/dashboard/orders" element={<OrdersPage/>} />
         </Routes>
       </div>
     </Router>

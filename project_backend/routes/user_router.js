@@ -78,4 +78,10 @@ userRouter.put(
   })
 );
 
+userRouter.get("/", async (req, res) => {
+  console.log("Get User call was made");
+  const users = await User.find();
+  res.send(users);
+});
+
 export default userRouter;

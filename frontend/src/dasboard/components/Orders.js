@@ -5,7 +5,7 @@ import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Title from './Title';
+import Title from '../Title';
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -60,11 +60,9 @@ export default function Orders(props) {
                     <TableCell>Rs. {order.totalPrice}</TableCell>
                     <TableCell>
                         {order.isDelivered ? 'Completed ' : 'Pending '}
-                        
-                       
                     </TableCell>
                     <TableCell>
-                    <button style={buttonStyles} onClick={() => {
+                    <button disabled={order.isDelivered} style={buttonStyles} onClick={() => {
                         // code to mark the order as delivered
                         }}>Mark as Delivered</button>
                         </TableCell>
