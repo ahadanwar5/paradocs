@@ -23,6 +23,8 @@ import Delivery from "./pages/Delivery";
 import OrderDetails from "./components/OrderDetails";
 import Account from "./pages/Account";
 import Contact from "./pages/Contact";
+import Dashboard from "./dasboard/Dashboard";
+import Admin from "./dasboard/Admin";
 
 function App() {
   return (
@@ -50,6 +52,8 @@ function App() {
           <Route path="/wish" element={<Wish />} />
           <Route path="/account" element={<Account />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </div>
     </Router>

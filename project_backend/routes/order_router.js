@@ -38,4 +38,10 @@ orderRouter.get('/:id', isAuth, expressAsyncHandler(async (req, res) => {
   })
 );
 
+orderRouter.get("/", async (req, res) => {
+  console.log("Order call was made")
+  const orders = await Order.find();
+  res.send(orders);
+});
+
 export default orderRouter;
