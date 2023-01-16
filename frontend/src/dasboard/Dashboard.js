@@ -16,6 +16,18 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { mainListItems } from './components/listItems';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    padding: '30px 60px',
+  },
+});
 
 function Copyright(props) {
   return (
@@ -83,6 +95,8 @@ function DashboardContent() {
   const toggleDrawer = () => {
     setOpen(!open);
   };
+
+  const classes = useStyles();
 
   return (
     <ThemeProvider theme={mdTheme}>
@@ -153,7 +167,17 @@ function DashboardContent() {
               {/* Recent Orders */}
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <h1>Welcome Admin</h1>
+                  {/* Welcome Admin Stuff*/ }
+                  <Box
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="center"
+                      height={400}
+                    >
+                    <Typography variant="h4" className={classes.root}>
+                      Welcome Admin!
+                    </Typography>
+                  </Box>
                 </Paper>
               </Grid>
             </Grid>

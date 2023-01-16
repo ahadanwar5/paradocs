@@ -79,7 +79,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 const mdTheme = createTheme();
 
-function OrdersPageContent() {
+function DashboardContent() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -154,7 +154,7 @@ function OrdersPageContent() {
               {/* Recent Orders */}
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <Orders/>
+                  <Orders />
                 </Paper>
               </Grid>
             </Grid>
@@ -166,6 +166,6 @@ function OrdersPageContent() {
   );
 }
 
-export default function OrdersPage() {
-  return <OrdersPageContent />;
+export default function Dashboard() {
+  return <DashboardContent />;
 }

@@ -17,7 +17,7 @@ userRouter.post("/login", async (req, res) => {
         _id: user._id,
         name: user.name,
         email: user.email,
-        contact:user.contact,
+        contact: user.contact,
         isAdmin: user.isAdmin,
         token: generateToken(user),
       });
@@ -35,7 +35,7 @@ userRouter.post(
       name: req.body.name,
       email: req.body.email,
       password: bcrypt.hashSync(req.body.password),
-      contact:req.body.contact,
+      contact: req.body.contact,
     });
     const user = await newUser.save();
     res.send({
@@ -43,8 +43,8 @@ userRouter.post(
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
-      contact:user.contact,
-      token: generhaateToken(user),
+      contact: user.contact,
+      token: generateToken(user),
     });
   })
 );
@@ -68,7 +68,7 @@ userRouter.put(
         _id: updatedUser._id,
         name: updatedUser.name,
         email: updatedUser.email,
-        contact:updatedUser.contact,
+        contact: updatedUser.contact,
         isAdmin: updatedUser.isAdmin,
         token: generateToken(updatedUser),
       });

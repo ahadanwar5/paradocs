@@ -54,7 +54,7 @@ export default function Users(props) {
         </TableBody>
       </Table>
       <Link color="primary" href="#" onClick={preventDefault} sx={{ mt: 3 }}>
-        See more orders
+        See more customers
       </Link>
     </React.Fragment>
   );

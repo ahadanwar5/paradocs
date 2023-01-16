@@ -17,11 +17,13 @@ const ProductHome = ({ item }) => {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, wish } = state;
   const addToCartHandler = async () => {
+    console.log("Home page cart");
     const existItem = cart.cartItems.find((x) => x._id === item._id);
     const quantity = existItem ? existItem.quantity + 1 : 1; //if existItem than quantity + 1 in cart if not than 1
 
     //this you can put but you don’t have to
-    const { data } = await axios.get(`/api/products/slug/${item.slug}`);
+    const { data } = await axios.get(`/api/products/${item.slug}`);
+    console.log(data)
     if (data.countInStock < quantity) {
       toast.warning("Product is Out of Stock", {
         position: toast.POSITION.TOP_CENTER,
