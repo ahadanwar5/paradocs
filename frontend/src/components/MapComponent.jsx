@@ -5,7 +5,7 @@ import '../styles/MapComponent.css'
 
 export default function MapComponent() {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyBDBWZewbYplD3oafGKBK66gotFML1BiVg',
+    googleMapsApiKey: '',
   });
 
   if (!isLoaded) return <div>Loading...</div>;
