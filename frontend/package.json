@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ahadanwar5.github.io/paradocs",
   "name": "frontend",
   "proxy": "http://localhost:4000",
   "version": "0.1.0",
