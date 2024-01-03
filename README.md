@@ -1,12 +1,10 @@
 # Paradocs - MERN Stack eCommerce Website
 
-![paradocsFull (1)](https://github.com/ahadanwar5/paradocs/assets/119756073/44c43b3e-245c-449f-aba6-458bba2dce1a)
-
-
-
 ## Overview
 
 Paradocs is a full-stack eCommerce website developed using the MERN (MongoDB, Express.js, React, Node.js) stack. It provides a user-friendly and secure platform for customers to purchase medical supplies and equipment online. The project is designed with scalability, maintainability, and modern web technologies in mind.
+
+![paradocsFull (1)](https://github.com/ahadanwar5/paradocs/assets/119756073/44c43b3e-245c-449f-aba6-458bba2dce1a)
 
 ## Features
 
